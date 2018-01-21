@@ -1,0 +1,17 @@
+package GetPrime;
+public class GetPrime{
+	public static void main(String[] args)
+	{
+		boolean[] notprime=new boolean[10001];
+		notprime[0]=false;
+		notprime[1]=false;
+		for(int i=2;i<notprime.length();i++) {
+			if(notprime[i]==false) {
+				System.out.print(i+" ");
+				for(int j=2*i;j<notprime.length();j++) {
+					notprime[j]=true;
+				}
+			}
+		}
+	}
+}

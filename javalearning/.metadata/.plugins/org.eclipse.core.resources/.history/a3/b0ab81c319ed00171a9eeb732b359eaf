@@ -1,0 +1,29 @@
+package GetPrime;
+public class GetPrime{
+	public static void main(String[] args)
+	{
+		final int MAX=10000;
+		boolean[] notprime=new boolean[MAX+1];
+		int length=0;
+		notprime[0]=false;
+		notprime[1]=false;
+		for(int i=2;i<notprime.length;i++) {
+			if(notprime[i]==false) {
+				length++;
+				for(int j=2*i;j<notprime.length;j=j+i) {
+					notprime[j]=true;
+				}
+			}
+		}
+		int[] prinum=new int[length];
+		int count=0;
+		for(int i=2;i<notprime.length;i++) {
+			if(notprime[i]==false) {
+				prinum[count++]=i;
+			}
+		}
+		for(int value : prinum) {
+			System.out.print(valse);
+		}
+	}
+}
